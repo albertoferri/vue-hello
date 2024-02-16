@@ -7,7 +7,27 @@
 </head>
 <body>
 
-    
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <div id="app">
+        <h1>
+            {{ titolo }}
+        </h1>
+    </div>
+
+    <script>
+
+        const {createApp} = Vue;
+
+        createApp({
+            data(){
+                return {
+                    titolo: "hello world!"
+                }
+            }
+        }).mount('#app');
+
+    </script>
     
 </body>
 </html>
