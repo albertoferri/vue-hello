@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,14 @@
 
     <!-- LINK BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        #img img:nth-child(2){
+            position: absolute;
+            bottom: 5px;
+            left: 100px;
+        }
+    </style>
 </head>
 <body>
 
@@ -18,8 +26,9 @@
                 {{ titolo }}
             </h1>
     
-            <div id="img">
-                <img class="img-fluid border-5 border border-primary rounded-5" :src="imageUrl" alt="HELLSDIVERS 2">
+            <div id="img" class="mb-5 position-relative">
+                <img class="img-fluid border-5 border border-primary rounded-5" :src="imageUrl1" alt="HELLSDIVERS 2">
+                <img :src="imageUrl2" alt="goku">
             </div>
         </div>
         
@@ -33,7 +42,8 @@
             data(){
                 return {
                     titolo: "VIVA LA DEMOCRAZIA!",
-                    imageUrl: 'https://www.playstationlifestyle.net/wp-content/uploads/sites/9/2023/05/helldivers-2.png'
+                    imageUrl1: 'https://www.playstationlifestyle.net/wp-content/uploads/sites/9/2023/05/helldivers-2.png',
+                    imageUrl2: 'https://i.gifer.com/ZJFD.gif'
                 }
             }
         }).mount('#app');
